@@ -1,10 +1,13 @@
 import React from "react";
-import { Box, Heading, Grommet } from "grommet";
+import { Box, Grommet } from "grommet";
+import { BrowserRouter, Route } from "react-router-dom";
+import Navigation from "./Components/Navigation/Navigation";
 
 const theme = {
   global: {
     colors: {
-      brand: "#228BE6"
+      brand: "#1c7293",
+      focus: "#9eb3c2"
     },
     font: {
       family: "Roboto",
@@ -14,36 +17,38 @@ const theme = {
   }
 };
 
-const AppBar = props => (
-  <Box
-    tag="header"
-    direction="row"
-    align="center"
-    justify="between"
-    background="brand"
-    pad={{ left: "medium", right: "small", vertical: "small" }}
-    elevation="medium"
-    style={{ zIndex: "1" }}
-    {...props}
-  />
-);
-
 function App() {
   return (
     <Grommet theme={theme} full>
-      <Box fill>
-        <AppBar>
-          <Heading level="3" margin="none">
-            My App
-          </Heading>
-        </AppBar>
+      <BrowserRouter>
+        <Box fill>
+          <Navigation />
 
-        <Box direction="row" flex overflow={{ horizontal: "hidden" }}>
-          <Box flex align="center" justify="center">
-            <h1>Placeholder</h1>
-          </Box>
+          <Route path="/" exact>
+            <Box direction="row" flex overflow={{ horizontal: "hidden" }}>
+              <Box flex align="center" justify="center">
+                <h1>Aidan Kinzett</h1>
+              </Box>
+            </Box>
+          </Route>
+
+          <Route path="/portfolio">
+            <Box direction="row" flex overflow={{ horizontal: "hidden" }}>
+              <Box flex align="center" justify="center">
+                <h1>My Portfolio</h1>
+              </Box>
+            </Box>
+          </Route>
+
+          <Route path="/contact">
+            <Box direction="row" flex overflow={{ horizontal: "hidden" }}>
+              <Box flex align="center" justify="center">
+                <h1>Contact</h1>
+              </Box>
+            </Box>
+          </Route>
         </Box>
-      </Box>
+      </BrowserRouter>
     </Grommet>
   );
 }
