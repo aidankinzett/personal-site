@@ -1,12 +1,10 @@
 import React from "react";
 import { Heading, Box, Anchor } from "grommet";
 import { Link } from "react-router-dom";
-import classes from "../Navigation/Navigation.module.css";
 
-export default () => {
+export default props => {
   const AppBar = props => (
     <Box
-      tag="header"
       direction="row"
       align="center"
       justify="center"
@@ -17,25 +15,26 @@ export default () => {
     />
   );
 
-  const paths = {
-    Home: "/",
-    Portfolio: "/portfolio",
-    Contact: "/contact"
-  };
-
   return (
-    <Box className={classes.NavContainer}>
-      <Heading level="2" margin="none" alignSelf="center" color="#1c224c">
-        Aidan Kinzett
-      </Heading>
+    <Box
+      direction="row"
+      justify="between"
+      style={{ marginLeft: "25px", marginRight: "25px" }}
+    >
+      <Box direction="row">
+        <Heading level="2">Aidan Kinzett</Heading>
+        <Anchor alignSelf="center" style={{marginLeft: "20px"}} href="https://www.github.com/aidankinzett">
+          @aidankinzett
+        </Anchor>
+      </Box>
+
       <AppBar>
-        {Object.entries(paths).map(([name, path]) => (
-          <Anchor key={path} className={classes.NavLinks} as={Link} to={path}>
+        {Object.entries(props.pages).map(([name, path]) => (
+          <Anchor key={path} as={Link} to={path} style={{ margin: "0 15px" }}>
             {name}
           </Anchor>
         ))}
       </AppBar>
     </Box>
-    // </div>
   );
 };
