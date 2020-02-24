@@ -8,6 +8,7 @@ import {
   ResponsiveContext
 } from "grommet";
 import EmojiWave from "./../EmojiWave/EmojiWave";
+import {Link} from "react-router-dom";
 
 function Home() {
   const size = React.useContext(ResponsiveContext);
@@ -34,8 +35,8 @@ function Home() {
         />
       </Box>
       <Box direction="row" gap="small" justify="center" wrap pad="medium">
-        <Button href="/portfolio" label="My Projects" />
-        <Button href="/contact" label="Contact Me" />
+        <Button as={Link} to="/portfolio" label="My Projects" />
+        <Button as={Link} to="/contact" label="Contact Me" />
       </Box>
     </Box>
   );
