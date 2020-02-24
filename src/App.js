@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Navigation from "./Components/Navigation/Navigation";
 import Home from "./Components/Home/Home";
 import Portfolio from "./Components/Portfolio/Portfolio";
+import Contact from './Components/Contact/Contact'
 
 const theme = {
   global: {
@@ -34,6 +35,7 @@ function App() {
             <Navigation pages={pages} />
             <Route path="/" exact component={Home} />
             <Route path="/portfolio" component={Portfolio} />
+            <Route path="/contact" component={Contact} />
           </Box>
         </Box>
       </BrowserRouter>

@@ -1,10 +1,10 @@
 import React from "react";
-import { Box } from "grommet";
+import { Box, Heading } from "grommet";
 
 function Portfolio() {
   return (
-    <Box flex align="center" justify="center">
-      <h1>Portfolio</h1>
+    <Box direction="column" gap="medium" pad="large" align="left" justify="center">
+      <Heading>Portfolio</Heading>
     </Box>
   );
 }

@@ -27,7 +27,7 @@ export default props => {
       align="center"
     >
       <Box direction="row">
-        <Anchor as={Link} to="/" style={{ color: "black" }}>
+        <Anchor as={Link} to="/" color="black">
           <Heading level="3">Aidan Kinzett</Heading>
         </Anchor>
 
@@ -35,6 +35,7 @@ export default props => {
           alignSelf="center"
           style={{ marginLeft: "20px" }}
           href="https://www.github.com/aidankinzett"
+          color="brand"
         >
           <Box direction="row" gap="xsmall">
             <Github />
@@ -45,7 +46,7 @@ export default props => {
 
       <AppBar>
         {Object.entries(props.pages).map(([name, path]) => (
-          <Anchor key={path} as={Link} to={path} style={{ margin: "0 15px" }}>
+          <Anchor color="brand" key={path} as={Link} to={path} style={{ margin: "0 15px" }}>
             {name}
           </Anchor>
         ))}
