@@ -35,7 +35,6 @@ const Contact = () => {
       justify="center"
     >
       <Heading>Contact</Heading>
-      <Heading level="3">Contact me using one of the following</Heading>
       {socials.map(item => (
         <Box direction="row" gap="small">
           <item.component />

@@ -28,7 +28,7 @@ export default props => {
     >
       <Box direction="row">
         <Anchor as={Link} to="/" color="black">
-          <Heading level="3">Aidan Kinzett</Heading>
+          <Heading level="3" style={{marginLeft: "15px"}}>Aidan Kinzett</Heading>
         </Anchor>
 
         <Anchor
