@@ -5,6 +5,8 @@ import Navigation from "./Components/Navigation/Navigation";
 import Home from "./Components/Home/Home";
 import Portfolio from "./Components/Portfolio/Portfolio";
 import Contact from './Components/Contact/Contact'
+import Resume from "./Components/Resume/Resume";
+
 
 const theme = {
   global: {
@@ -24,7 +26,8 @@ function App() {
   // the page names and paths for the website
   const [pages] = useState({
     Portfolio: "/portfolio",
-    Contact: "/contact"
+    Contact: "/contact",
+    Resume: "/resume"
   });
 
   return (
@@ -36,6 +39,7 @@ function App() {
             <Route path="/" exact component={Home} />
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/contact" component={Contact} />
+            <Route path="/resume" component={Resume} />
           </Box>
         </Box>
       </BrowserRouter>
