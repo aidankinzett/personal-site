@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Box, Anchor } from "grommet";
+import { Heading, Box, Anchor, ResponsiveContext } from "grommet";
 import { Link } from "react-router-dom";
 
 export default props => {
@@ -15,15 +15,26 @@ export default props => {
     />
   );
 
-  return (
+  const size = React.useContext(ResponsiveContext);
+
+  let navigationBar;
+
+  navigationBar = (
     <Box
-      direction="row"
-      justify="between"
-      style={{ marginLeft: "25px", marginRight: "25px" }}
+      direction={size === "small" ? "column" : "row"}
+      justify={size === "small" ? "center" : "between"}
+      align="center"
     >
       <Box direction="row">
-        <Heading level="2">Aidan Kinzett</Heading>
-        <Anchor alignSelf="center" style={{marginLeft: "20px"}} href="https://www.github.com/aidankinzett">
+        <Anchor as={Link} to="/" style={{ color: "black" }}>
+          <Heading level="3">Aidan Kinzett</Heading>
+        </Anchor>
+
+        <Anchor
+          alignSelf="center"
+          style={{ marginLeft: "20px" }}
+          href="https://www.github.com/aidankinzett"
+        >
           @aidankinzett
         </Anchor>
       </Box>
@@ -37,4 +48,6 @@ export default props => {
       </AppBar>
     </Box>
   );
+
+  return navigationBar;
 };

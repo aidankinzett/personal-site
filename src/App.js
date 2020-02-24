@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { Box, Grommet } from "grommet";
 import { BrowserRouter, Route } from "react-router-dom";
 import Navigation from "./Components/Navigation/Navigation";
-import Home from './Components/Home/Home'
-import Portfolio from './Components/Portfolio/Portfolio'
-
+import Home from "./Components/Home/Home";
+import Portfolio from "./Components/Portfolio/Portfolio";
 
 const theme = {
   global: {
@@ -21,20 +20,21 @@ const theme = {
 };
 
 function App() {
-
   // the page names and paths for the website
   const [pages] = useState({
-    Home: "/",
     Portfolio: "/portfolio",
+    Contact: "/contact"
   });
 
   return (
     <Grommet theme={theme} full>
       <BrowserRouter>
-        <Box fill>
-          <Navigation pages={pages} />
-          <Route path="/" exact component={Home}/>
-          <Route path="/portfolio" component={Portfolio}/>          
+        <Box fill align="center">
+          <Box fill="vertical" width="xlarge" alignSelf="center">
+            <Navigation pages={pages} />
+            <Route path="/" exact component={Home} />
+            <Route path="/portfolio" component={Portfolio} />
+          </Box>
         </Box>
       </BrowserRouter>
     </Grommet>
