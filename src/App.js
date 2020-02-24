@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Grommet } from "grommet";
 import { BrowserRouter, Route } from "react-router-dom";
 import Navigation from "./Components/Navigation/Navigation";
@@ -32,7 +32,7 @@ function App() {
 
   const portfolioItems = [{
     heading: "FlirImageExtractor"
-    
+
   }]
 
   return (
