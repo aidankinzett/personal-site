@@ -24,11 +24,16 @@ const theme = {
 
 function App() {
   // the page names and paths for the website
-  const [pages] = useState({
+  const pages = {
     Portfolio: "/portfolio",
     Contact: "/contact",
     Resume: "/resume"
-  });
+  };
+
+  const portfolioItems = [{
+    heading: "FlirImageExtractor"
+    
+  }]
 
   return (
     <Grommet theme={theme} full>
@@ -37,7 +42,7 @@ function App() {
           <Box fill="vertical" width="xlarge" alignSelf="center">
             <Navigation pages={pages} />
             <Route path="/" exact component={Home} />
-            <Route path="/portfolio" component={Portfolio} />
+            <Route path="/portfolio"  render={(props) => <Portfolio portfolioItems={portfolioItems} {...props}/>} />
             <Route path="/contact" component={Contact} />
             <Route path="/resume" component={Resume} />
           </Box>
