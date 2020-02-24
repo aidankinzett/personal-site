@@ -4,7 +4,7 @@ import EmojiWave from "./../EmojiWave/EmojiWave";
 
 function Home() {
   return (
-    <Box flex align="center" justify="center">
+    <Box flex align="center" justify="center" pad="large">
       <Heading>
         Hey, I'm Aidan Kinzett <EmojiWave />
       </Heading>
