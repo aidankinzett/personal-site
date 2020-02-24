@@ -1,6 +1,7 @@
 import React from "react";
-import { Heading, Box, Anchor, ResponsiveContext } from "grommet";
+import { Heading, Box, Anchor, ResponsiveContext, Text } from "grommet";
 import { Link } from "react-router-dom";
+import { Github } from "grommet-icons";
 
 export default props => {
   const AppBar = props => (
@@ -35,7 +36,10 @@ export default props => {
           style={{ marginLeft: "20px" }}
           href="https://www.github.com/aidankinzett"
         >
-          @aidankinzett
+          <Box direction="row" gap="xsmall">
+            <Github />
+            <Text>@aidankinzett</Text>
+          </Box>
         </Anchor>
       </Box>
 
