@@ -59,7 +59,7 @@ function App() {
     {
       heading: "This Website",
       icon: Github,
-      description: "This website is build using React, Grommet, and deployed with now.sh",
+      description: "This website is built using React, Grommet, and deployed with now.sh",
       link: "https://github.com/aidankinzett/personal-site"
     }
   ];
