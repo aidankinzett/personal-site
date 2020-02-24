@@ -34,8 +34,8 @@ function Home() {
         />
       </Box>
       <Box direction="row" gap="small" justify="center" wrap pad="medium">
-        <Button href="/portfolio" label="My projects" />
-        <Button href="/contact" label="Contact me" />
+        <Button href="/portfolio" label="My Projects" />
+        <Button href="/contact" label="Contact Me" />
       </Box>
     </Box>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grommet } from "grommet";
+import { Box, Grommet, Text, Image } from "grommet";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Navigation from "./Components/Navigation/Navigation";
 import Home from "./Components/Home/Home";
@@ -41,7 +41,7 @@ function App() {
     {
       heading: "FlirImageExtractor",
       icon: Github,
-      description: "A small tool/lib to read temperatures and original photos from FLIR® thermal camera images.",
+      description: <Text>A small tool/lib to read temperatures and original photos from FLIR® thermal camera images.<br /><Image src="https://img.shields.io/pypi/dm/flirimageextractor?style=flat-square"/></Text>,
       link: "https://github.com/nationaldronesau/FlirImageExtractor"
     },
     {
