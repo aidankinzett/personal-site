@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Heading, Text, Anchor } from "grommet";
-import { Github, Twitter, Linkedin } from "grommet-icons";
+import { Github, Twitter, Linkedin, Mail } from "grommet-icons";
 
 const Contact = () => {
   const socials = [
@@ -18,6 +18,11 @@ const Contact = () => {
       component: Linkedin,
       username: "@aidankinzett",
       link: ""
+    },
+    {
+      component: Mail,
+      username: "hello@aidankinzett.com",
+      link: "mailto:hello@aidankinzett.com"
     }
   ];
 
