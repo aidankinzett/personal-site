@@ -16,8 +16,8 @@ const Contact = () => {
     },
     {
       component: Linkedin,
-      username: "@aidankinzett",
-      link: ""
+      username: "Aidan Kinzett",
+      link: "https://www.linkedin.com/in/aidan-kinzett-830b25149/"
     },
     {
       component: Mail,
