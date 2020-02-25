@@ -1,7 +1,8 @@
 import React from "react";
-import { Box, Heading, Text, Anchor } from "grommet";
+import { Box, Heading, Text, Anchor, Image, ResponsiveContext } from "grommet";
 
 export default props => {
+  const size = React.useContext(ResponsiveContext);
   return (
     <Box
       border={{ color: "neutral-3", size: "small" }}
@@ -26,15 +27,16 @@ export default props => {
       </Anchor>
       <Text>{props.item.description}</Text>
       {props.item.repo && (
-        <a
+        <Anchor
           style={{ marginTop: "10px" }}
           href={`https://www.github.com/${props.item.repo}`}
         >
-          <img
+          <Image
             src={`https://gh-card.dev/repos/${props.item.repo}.svg`}
             alt={`GitHub card for the repo ${props.item.repo}`}
+            fill={size === "small"}
           />
-        </a>
+        </Anchor>
       )}
     </Box>
   );
