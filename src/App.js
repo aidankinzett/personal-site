@@ -41,26 +41,26 @@ function App() {
     {
       heading: "FlirImageExtractor",
       icon: Github,
-      description: <Text>A small tool/lib to read temperatures and original photos from FLIR® thermal camera images.<br /><Image src="https://img.shields.io/pypi/dm/flirimageextractor?style=flat-square"/></Text>,
-      link: "https://github.com/nationaldronesau/FlirImageExtractor"
+      description: <Text>A small tool/lib to read temperatures and original photos from FLIR® thermal camera images.<br /><Image style={{ marginTop: "10px" }} src="https://img.shields.io/pypi/dm/flirimageextractor?style=flat-square"/></Text>,
+      repo: "nationaldronesau/FlirImageExtractor"
     },
     {
       heading: "Freespeech",
       icon: Github,
       description: "An Augmented and Alternative Communication (AAC) web app to help a child who is not able to speak learn to communicate with those around them",
-      link: "https://github.com/Merkie/freespeech"
+      repo: "Merkie/freespeech"
     },
     {
       heading: "Echodownloader",
       icon: Github,
       description: "Automatically download lecture recordings from QUT",
-      link: "https://github.com/aidankinzett/EchoDownloader"
+      repo: "aidankinzett/EchoDownloader"
     },
     {
       heading: "This Website",
       icon: Github,
       description: "This website is built using React, Grommet, and deployed with now.sh",
-      link: "https://github.com/aidankinzett/personal-site"
+      repo: "aidankinzett/personal-site"
     }
   ];
 

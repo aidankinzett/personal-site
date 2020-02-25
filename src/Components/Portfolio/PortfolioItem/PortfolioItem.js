@@ -10,7 +10,13 @@ export default props => {
       direction="column"
       style={{ minHeight: "unset" }}
     >
-      <Anchor href={props.item.link}>
+      <Anchor
+        href={
+          props.item.link
+            ? props.item.link
+            : `https://www.github.com/${props.item.repo}`
+        }
+      >
         <Box direction="row" gap="small" align="baseline">
           <Heading level="2" style={{ marginTop: "5px" }}>
             {props.item.heading}
@@ -19,6 +25,17 @@ export default props => {
         </Box>
       </Anchor>
       <Text>{props.item.description}</Text>
+      {props.item.repo && (
+        <a
+          style={{ marginTop: "10px" }}
+          href={`https://www.github.com/${props.item.repo}`}
+        >
+          <img
+            src={`https://gh-card.dev/repos/${props.item.repo}.svg`}
+            alt={`GitHub card for the repo ${props.item.repo}`}
+          />
+        </a>
+      )}
     </Box>
   );
 };
