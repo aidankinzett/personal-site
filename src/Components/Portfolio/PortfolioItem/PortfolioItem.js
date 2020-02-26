@@ -22,8 +22,8 @@ export default props => {
           <Heading level="2" style={{ marginTop: "5px" }}>
             {props.item.heading}
           </Heading>
-          <Heading level="5">{props.item.topics.join(", ")}</Heading>
           <props.item.icon />
+          <Heading level="5">{props.item.topics.join(", ")}</Heading>
         </Box>
       </Anchor>
       <Text>{props.item.description}</Text>
