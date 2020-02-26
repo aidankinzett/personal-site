@@ -34,33 +34,38 @@ function App() {
   const portfolioItems = [
     {
       heading: "Smartdata",
+      topics: ["Vue.js", "Vuetify", "Vuex", "Vue Router", "Django"],
       icon: Domain,
       description: "Web platform for viewing and annotating images and 3D models created using images from drones.",
       link: "https://nationaldrones.com.au/smart-data/"
     },
     {
       heading: "FlirImageExtractor",
+      topics: ["Python"],
       icon: Github,
       description: <Text>A small tool/lib to read temperatures and original photos from FLIR® thermal camera images.<br /><Image style={{ marginTop: "10px" }} src="https://img.shields.io/pypi/dm/flirimageextractor?style=flat-square"/></Text>,
       repo: "nationaldronesau/FlirImageExtractor"
     },
     {
       heading: "Freespeech",
+      topics: ["Vue.js" , "Vuetify"],
       icon: Github,
       description: "An Augmented and Alternative Communication (AAC) web app to help a child who is not able to speak learn to communicate with those around them",
       repo: "Merkie/freespeech"
     },
     {
       heading: "Echodownloader",
+      topics: ["Python", "Flask"],
       icon: Github,
       description: "Automatically download lecture recordings from QUT",
       repo: "aidankinzett/EchoDownloader"
     },
     {
       heading: "This Website",
+      topics: ["React", "Grommet", "now.sh"],
       icon: Github,
       description: "This website is built using React, Grommet, and deployed with now.sh",
-      repo: "aidankinzett/personal-site"
+      // repo: "aidankinzett/personal-site"
     }
   ];
 
