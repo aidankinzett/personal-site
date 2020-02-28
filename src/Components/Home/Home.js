@@ -17,7 +17,7 @@ function Home() {
 
   return (
     <Box direction="column">
-      <Box flex align="center" justify="center" pad="large">
+      <Box flex align="center" justify="center" pad="medium">
         <Box
           height="small"
           width="small"
