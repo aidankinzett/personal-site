@@ -84,20 +84,21 @@ function App() {
       repo: "Merkie/freespeech"
     },
     {
-      heading: "Echodownloader",
-      topics: ["Python", "Flask"],
-      icon: Github,
-      description: "Automatically download lecture recordings from QUT",
-      repo: "aidankinzett/EchoDownloader"
-    },
-    {
       heading: "This Website",
       topics: ["React", "Grommet", "now.sh"],
       icon: Github,
       description:
         "This website is built using React, Grommet, and deployed with now.sh",
       repo: "aidankinzett/personal-site"
-    }
+    },
+    {
+      heading: "Echodownloader",
+      topics: ["Python", "Flask"],
+      icon: Github,
+      description: "Automatically download lecture recordings from QUT",
+      repo: "aidankinzett/EchoDownloader"
+    },
+    
   ];
 
   const { scheme } = useColorScheme()

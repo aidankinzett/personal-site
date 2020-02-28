@@ -5,9 +5,10 @@ export default props => {
   const size = React.useContext(ResponsiveContext);
   return (
     <Box
-      border={{ color: "grey", size: "small" }}
-      pad="medium"
-      round
+      border={{ color: "grey", size: "medium", side: "top" }}
+      pad={{
+        vertical: "medium"
+      }}
       direction="column"
       style={{ minHeight: "unset" }}
     >
@@ -25,7 +26,9 @@ export default props => {
             </Heading>
             <props.item.icon />
           </Box>
-          <Heading level="6" style={{margin: 0, marginBottom: 15}}>{props.item.topics.join(", ")}</Heading>
+          <Heading level="6" style={{ margin: 0, marginBottom: 15 }}>
+            {props.item.topics.join(", ")}
+          </Heading>
         </Box>
       </Anchor>
       <Text>{props.item.description}</Text>
