@@ -5,7 +5,7 @@ export default props => {
   const size = React.useContext(ResponsiveContext);
   return (
     <Box
-      border={{ color: "neutral-3", size: "small" }}
+      border={{ color: "grey", size: "small" }}
       pad="medium"
       round
       direction="column"
