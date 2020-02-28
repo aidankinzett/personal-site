@@ -18,12 +18,14 @@ export default props => {
             : `https://www.github.com/${props.item.repo}`
         }
       >
-        <Box direction="row" gap="small" align="baseline">
-          <Heading level="2" style={{ marginTop: "5px" }}>
-            {props.item.heading}
-          </Heading>
-          <props.item.icon />
-          <Heading level="5">{props.item.topics.join(", ")}</Heading>
+        <Box direction="column">
+          <Box direction="row" gap="small" align="baseline">
+            <Heading level="2" style={{ marginTop: 5, marginBottom: 0 }}>
+              {props.item.heading}
+            </Heading>
+            <props.item.icon />
+          </Box>
+          <Heading level="6" style={{margin: 0, marginBottom: 15}}>{props.item.topics.join(", ")}</Heading>
         </Box>
       </Anchor>
       <Text>{props.item.description}</Text>
