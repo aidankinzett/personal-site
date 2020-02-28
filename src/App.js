@@ -95,8 +95,8 @@ function App() {
       topics: ["React", "Grommet", "now.sh"],
       icon: Github,
       description:
-        "This website is built using React, Grommet, and deployed with now.sh"
-      // repo: "aidankinzett/personal-site"
+        "This website is built using React, Grommet, and deployed with now.sh",
+      repo: "aidankinzett/personal-site"
     }
   ];
 
