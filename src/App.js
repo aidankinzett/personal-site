@@ -27,9 +27,10 @@ const theme = {
   dark: {
     global: {
       colors: {
-        brand: "#1c7293",
+        brand: "#4eabcf",
         focus: "#9eb3c2",
-        background: "#444444"
+        background: "#444444",
+        "accent-1": "brand"
       },
       font: {
         family:

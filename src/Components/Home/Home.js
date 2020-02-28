@@ -5,10 +5,12 @@ import {
   Paragraph,
   Anchor,
   Button,
-  ResponsiveContext
+  ResponsiveContext,
+  Image
 } from "grommet";
 import EmojiWave from "./../EmojiWave/EmojiWave";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import imageOfMe from "../../media/images/me.jpg";
 
 function Home() {
   const size = React.useContext(ResponsiveContext);
@@ -16,9 +18,19 @@ function Home() {
   return (
     <Box direction="column">
       <Box flex align="center" justify="center" pad="large">
+        <Box
+          height="small"
+          width="small"
+          round="full"
+          style={{ overflow: "hidden" }}
+          margin="large"
+        >
+          <Image fit="cover" src={imageOfMe} />
+        </Box>
         <Heading>
           Hey, I'm Aidan Kinzett <EmojiWave />
         </Heading>
+
         <Paragraph textAlign={size !== "small" ? "center" : "left"}>
           I am a software developer in Brisbane, Australia. I work at{" "}
           <Anchor href="https://nationaldrones.com">National Drones</Anchor> on
