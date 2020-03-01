@@ -9,6 +9,10 @@ import Resume from "./Components/Resume/Resume";
 import { Github, Domain } from "grommet-icons";
 import { useColorScheme } from 'use-color-scheme'
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-158839519-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 const theme = {
   light: {
     global: {
