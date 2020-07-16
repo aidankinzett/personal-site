@@ -6,7 +6,7 @@ import {
   Anchor,
   Button,
   ResponsiveContext,
-  Image
+  Image,
 } from "grommet";
 import EmojiWave from "./../EmojiWave/EmojiWave";
 import { Link } from "react-router-dom";
@@ -32,9 +32,8 @@ function Home() {
         </Heading>
 
         <Paragraph textAlign={size !== "small" ? "center" : "left"}>
-          I am a software developer in Brisbane, Australia. I work at{" "}
-          <Anchor href="https://nationaldrones.com">National Drones</Anchor> on
-          Smartdata.
+          I am a software developer in Brisbane, Australia. <br />I work at{" "}
+          <Anchor href="https://labrys.io">Labrys</Anchor>.
         </Paragraph>
       </Box>
       <Box flex align="center" pad="small">
